@@ -52,6 +52,8 @@ public abstract class GeneralRecyclerViewFragment extends Fragment {
 
         recyclerView = (RecyclerView) myView.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),
+                LinearLayoutManager.VERTICAL));
         recyclerViewAdapter = new GeneralRecyclerViewAdapter(getActivity());
         recyclerView.setAdapter(recyclerViewAdapter);
         recyclerViewAdapter.setDataList(dataList);
